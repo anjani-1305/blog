@@ -13,7 +13,9 @@ const blogSchema = new Schema({
     },
     img :  {
         type: String,
-        required: true,
+    },
+    video:{
+        type: String,
     },
     user : {
         type: mongoose.Types.ObjectId,

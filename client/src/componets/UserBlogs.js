@@ -94,6 +94,7 @@ const UserBlogs = () => {
           title={blog.title}
           description={blog.description}
           img={blog.img}
+          video={blog.video}
           userName={user.name}
           />
           {/* <img

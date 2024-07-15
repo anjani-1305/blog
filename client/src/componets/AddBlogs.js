@@ -14,6 +14,7 @@ const AddBlogs = () => {
     title: "",
     description: "",
     imageURL: "",
+    videoURL: "",
   });
   const handleChange = (e) => {
     setInputs((prevState) => ({
@@ -27,6 +28,7 @@ const AddBlogs = () => {
         title: inputs.title,
         desc: inputs.description,
         img: inputs.imageURL,
+        video: inputs.videoURL,
         user: localStorage.getItem("userId"),
       })
       .catch((err) => console.log(err));
@@ -93,6 +95,17 @@ const AddBlogs = () => {
             name="imageURL"
             onChange={handleChange}
             value={inputs.imageURL}
+            margin="auto"
+            variant="outlined"
+          />
+          <InputLabel className={classes.font} sx={labelStyles}>
+            Video URL
+          </InputLabel>
+          <TextField
+            className={classes.font}
+            name="videoURL"
+            onChange={handleChange}
+            value={inputs.videoURL}
             margin="auto"
             variant="outlined"
           />

@@ -20,7 +20,7 @@ const getAllBlogs = async(req,res,next) =>{
 
 const addBlog = async(req,res,next) =>{
 
-    const { title , desc , img , user } = req.body;
+    const { title , desc , img ,video , user } = req.body;
 
     const currentDate = new Date();
 
@@ -36,7 +36,7 @@ const addBlog = async(req,res,next) =>{
 
 
     const blog = new Blog({
-        title ,desc , img , user, date: currentDate
+        title ,desc , img , video , user, date: currentDate
     });
 
     try {

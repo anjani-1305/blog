@@ -29,6 +29,7 @@ const Blogs = () => {
             isUser={localStorage.getItem("userId") === blog.user._id}
             title={blog.title}
             desc={blog.desc}
+            video={blog.video}
             img={blog.img}
             user={blog.user.name}
             date={new Date(blog.date).toLocaleDateString()}

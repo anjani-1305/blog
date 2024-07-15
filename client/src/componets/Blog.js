@@ -17,8 +17,8 @@ import { useStyles } from "./utils";
 import config from "../config";
 import { lightTheme, darkTheme } from "../utils/theme";
 import { useSelector } from "react-redux";
-
-const Blogs = ({ title, desc, img, user, isUser, id }) => {
+import ReactPlayer from 'react-player';
+const Blogs = ({ title, desc, img, user, isUser, id ,video}) => {
   const isDark = useSelector((state) => state.theme.isDarkmode);
   const theme = isDark ? darkTheme : lightTheme;
   const classes = useStyles();
@@ -74,8 +74,9 @@ const Blogs = ({ title, desc, img, user, isUser, id }) => {
           }
           title={title}
         />
-        <CardMedia component="img" image={img} height="300"  alt="Paella dish" />
-
+        {img && <CardMedia component="img" image={img} height="300" alt="Paella dish" />}
+        {video && <ReactPlayer url={video} />}
+        
         <CardContent>
           <hr />
           <br />
